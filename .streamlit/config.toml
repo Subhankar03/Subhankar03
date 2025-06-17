@@ -1,0 +1,9 @@
+[server]
+enableStaticServing = true
+
+[theme]
+base = "dark"
+primaryColor = "#FF814B"
+secondaryBackgroundColor = "#27282F"
+linkColor = "#40E0D0"
+baseRadius = "full"

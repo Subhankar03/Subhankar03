@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=National+Park:wght@200..800&family=Zen+Dots&display=swap');
+
+/* Remove header and footer */
+header {display: none !important;}
+footer {display: none !important;}
+
+/* Gradient background behind content */
+.stApp:before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    background: linear-gradient(to bottom, hsla(240, 70%, 70%, 0.1), hsla(0, 0%, 0%, 0));
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Geometric pattern overlay */
+.stApp:after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 250px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.18;
+    background-image:
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 2px, transparent 2px, transparent 60px),
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 2px, transparent 2px, transparent 60px);
+}
+
+
+/* Profile picture styling */
+.profile-picture {
+	width: clamp(96px, 5vw, 128px);
+	height: clamp(96px, 5vw, 128px);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Title styling */
+h1 {
+	font-family: "Anta", sans-serif !important;
+	font-size: clamp(1.9rem, 5vw, 2.5rem);;
+	background: linear-gradient(90deg, hsl(18, 90%, 65%), hsl(0, 90%, 68%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-top: 1rem;
+}
+
+/* Tabs styling */
+.stTabs [data-baseweb="tab-list"] {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0;
+	margin-bottom: 2rem;
+	overflow: visible;
+}
+.stTabs [data-baseweb="tab-border"] {
+	display: none;
+}
+.stTabs [data-baseweb="tab"] {
+	padding: 1rem 1.5rem;
+	border-radius: 1.3rem !important;
+	transition: 0.3s ease-in-out;
+}
+.stTabs [aria-selected="true"] {
+	color: white;
+	z-index: 2;
+}
+.stTabs [data-baseweb="tab"]:not([aria-selected="true"]):hover {
+	background: #2D2933;
+}
+.stTabs [data-baseweb="tab-highlight"] {
+	height: 95%;
+	margin-bottom: 2px;
+	border-radius: 1.3rem !important;
+	background: linear-gradient(180deg, hsl(18, 100%, 65%), hsla(0, 100%, 65%));
+	transition: all 0.3s ease-in-out;
+}
+
+/* About Me section */
+
+/* Resume download popover styling */
+.resume-btn {
+	display: inline-block;
+	background: transparent;
+	color: hsl(12, 90%, 65%);
+	padding: 6px 12px;
+	border: 2px solid hsl(12, 90%, 65%);
+	border-radius: 20px;
+	cursor: pointer;
+	margin-top: 10px;
+	position: relative;
+	float: right;
+	transition: 0.2s ease-in-out;
+}
+.resume-btn:hover {
+    background: hsl(12, 100%, 65%);
+    color: white;
+}
+
+.popover {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	background-color: #2D2933;
+	border: 1px solid #4b4554;
+	border-radius: 25px;
+	padding: 10px;
+	z-index: 100;
+	min-width: 205px;
+	top: 41px;
+	right: 0;
+	box-shadow: 0 0 15px hsla(0, 0%, 0%);
+}
+
+.resume-btn:hover .popover {
+	opacity: 1;
+	visibility: visible;
+	animation: fadeIn 0.2s ease-in-out forwards;
+	transform: translateY(0);
+}
+
+.resume-btn:not(:hover) .popover {
+	animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+/* Animation for popover appearance and disappearance */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+	99% {
+		opacity: 0;
+		transform: translateY(-10px);
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-10px);
+		visibility: hidden;
+	}
+}
+
+.popover img {
+	width: 16px;
+	margin: 0 8px 2px 0;
+}
+.popover a {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	color: white;
+}
+.popover a:hover {
+	background-color: #4b4554;
+	border-radius: 25px;
+	color: white;
+	text-decoration: none;
+}
+
+/* My Projects section */
+
+/* Project preview image styling */
+.project-preview {
+	border-radius: 25px;
+	width: 100%;
+	transition: .3s ease-in-out;
+	border: 3px solid transparent;
+	background-image: linear-gradient(#2D2933, #2D2933), linear-gradient(180deg, hsl(18, 100%, 65%), hsla(0, 100%, 65%));
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
+.project-preview:hover {
+	border-radius: 26px;
+	transform: scale(1.05);
+	box-shadow: 0 0 25px hsla(0, 0%, 100%, .4);
+}
+
+/* Center page link buttons */
+.stPageLink {
+	display: flex;
+	justify-content: center;
+}
+[data-testid="stPageLink-NavLink"] {
+	padding: 4px 16px;
+}
+
+/* Contact Me section */
+
+/* Hyperlink styling */
+a, a.cert-link {
+	text-decoration: none;
+	color: #40E0D0;
+}
+a:hover {
+	text-decoration: underline;
+	color: #32ad9f;
+}

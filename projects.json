@@ -1,0 +1,22 @@
+{
+	"Attrition Analysis": {
+		"preview": "app/static/projects/attrition-preview.png",
+		"url": "https://attrition-analysis.streamlit.app"
+	},
+	"COVID Pandemic Impact": {
+		"preview": "app/static/projects/covid-preview.png",
+		"url": "https://covid-pandemic-impact.streamlit.app"
+	},
+	"BlinkIt Sales Dashboard": {
+		"preview": "app/static/projects/blinkit-preview.png",
+		"url": "https://blinkit-sales-dashboard.streamlit.app"
+	},
+	"BlinkIt Sales EDA": {
+		"preview": "app/static/projects/blinkit-eda-preview.png",
+		"url": "https://blinkit-sales-eda.streamlit.app"
+	},
+	"Insurance Premium Prediction": {
+		"preview": "app/static/projects/insurance-preview.png",
+		"url": "https://insurance-premia-prediction.streamlit.app"
+	}
+}
