@@ -9,7 +9,7 @@ with open('projects.json') as f:
 # Profile pic and title (custom HTML)
 st.html('''
 <div style="display: flex; align-items: center; gap: clamp(15px, 5vw, 30px); margin-bottom: 24px;">
-    <img src="app/static/profile pic.png" alt="Profile Picture" class="profile-picture">
+    <img src="app/static/profile-pic.png" alt="Profile Picture" class="profile-picture">
     <h1>Subhankar Dutta</h1>
 </div>
 ''')
@@ -24,11 +24,11 @@ with about_me:
 	<div class="resume-btn">
 		Download Resume
 		<div class="popover">
-			<a href="app/static/Data Analyst Resume.docx" download="Subhankar Dutta Resume.docx">
-				<img src="app/static/icons/docx file.png">Download as DOCX
+			<a href="app/static/resume.docx" download="Subhankar Dutta Resume.docx">
+				<img src="app/static/icons/docx-file.png">Download as DOCX
 			</a>
-			<a href="app/static/Data Analyst Resume.pdf" download="Subhankar Dutta Resume.pdf">
-				<img src="app/static/icons/pdf file.png">Download as PDF
+			<a href="app/static/resume.pdf" download="Subhankar Dutta Resume.pdf">
+				<img src="app/static/icons/pdf-file.png">Download as PDF
 			</a>
 		</div>
 	</div>
