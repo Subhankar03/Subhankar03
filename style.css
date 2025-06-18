@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=National+Park:wght@200..800&family=Zen+Dots&display=swap');
 
-/* Remove header and footer overlays */
+/* Remove header */
 header {display: none !important;}
-._profileContainer_gzau3_53 {display: none !important;}
-a[href^="https://streamlit"] {display: none !important;}
 
 /* Gradient background behind content */
 .stApp:before {
