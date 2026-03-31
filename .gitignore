@@ -1,4 +1,2 @@
 .idea
 .venv
-pyproject.toml
-uv.lock

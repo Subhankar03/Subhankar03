@@ -40,9 +40,10 @@ header {display: none !important;}
 /* Title styling */
 h1 {
 	font-family: "Anta", sans-serif !important;
-	font-size: clamp(1.9rem, 5vw, 2.5rem);;
+	font-size: clamp(1.9rem, 5vw, 2.5rem);
 	background: linear-gradient(90deg, hsl(18, 90%, 65%), hsl(0, 90%, 68%));
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin-top: 1rem;
 }
@@ -80,96 +81,34 @@ h1 {
 
 /* About Me section */
 
-/* Resume download popover styling */
+/* Resume download button */
 .resume-btn {
-	display: inline-block;
-	background: transparent;
-	color: hsl(12, 90%, 65%);
-	padding: 6px 12px;
-	border: 2px solid hsl(12, 90%, 65%);
-	border-radius: 20px;
-	cursor: pointer;
-	margin-top: 10px;
-	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
 	float: right;
-	transition: 0.2s ease-in-out;
+	margin-top: 10px;
+	padding: 7px 18px;
+	border-radius: 25px;
+	font-weight: 600;
+	text-decoration: none !important;
+	color: hsl(18, 90%, 60%) !important;
+	background: transparent;
+	border: 2px solid hsl(18, 90%, 60%);
+	transition: all 0.3s ease;
 }
 .resume-btn:hover {
-    background: hsl(12, 100%, 65%);
-    color: white;
+	background: transparent;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+	text-decoration: none !important;
 }
-
-.popover {
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	background-color: #2D2933;
-	border: 1px solid #4b4554;
-	border-radius: 25px;
-	padding: 10px;
-	z-index: 100;
-	min-width: 205px;
-	top: 41px;
-	right: 0;
-	box-shadow: 0 0 15px hsla(0, 0%, 0%);
+.resume-btn svg {
+	flex-shrink: 0;
+	transition: filter 0.3s ease;
 }
-
-.resume-btn:hover .popover {
-	opacity: 1;
-	visibility: visible;
-	animation: fadeIn 0.2s ease-in-out forwards;
-	transform: translateY(0);
-}
-
-.resume-btn:not(:hover) .popover {
-	animation: fadeOut 0.2s ease-in-out forwards;
-}
-
-/* Animation for popover appearance and disappearance */
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-		transform: translateY(0);
-		visibility: visible;
-	}
-	99% {
-		opacity: 0;
-		transform: translateY(-10px);
-		visibility: visible;
-	}
-	100% {
-		opacity: 0;
-		transform: translateY(-10px);
-		visibility: hidden;
-	}
-}
-
-.popover img {
-	width: 16px;
-	margin: 0 8px 2px 0;
-}
-.popover a {
-	display: block;
-	padding: 8px 16px;
-	text-decoration: none;
-	color: white;
-}
-.popover a:hover {
-	background-color: #4b4554;
-	border-radius: 25px;
-	color: white;
-	text-decoration: none;
+.resume-btn:hover svg {
+	filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
 }
 
 /* My Projects section */
