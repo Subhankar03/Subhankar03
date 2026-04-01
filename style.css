@@ -103,11 +103,11 @@ h1 {
 	text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 	text-decoration: none !important;
 }
-.resume-btn svg {
+.resume-btn img {
 	flex-shrink: 0;
 	transition: filter 0.3s ease;
 }
-.resume-btn:hover svg {
+.resume-btn:hover img {
 	filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
 }
 

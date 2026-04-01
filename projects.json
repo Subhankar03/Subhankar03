@@ -1,7 +1,11 @@
 {
+	"TrackWise - Resume Analyzer": {
+		"preview": "app/static/projects/trackwise-preview.png",
+		"url": "https://trackwise.streamlit.app"
+	},
 	"Attrition Analysis": {
 		"preview": "app/static/projects/attrition-preview.png",
-		"url": "https://attrition-analysis.streamlit.app"
+		"url": "https://attrition-analyis-pbi.streamlit.app"
 	},
 	"COVID Pandemic Impact": {
 		"preview": "app/static/projects/covid-preview.png",
